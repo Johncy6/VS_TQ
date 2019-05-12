@@ -1,7 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeAndWeather", "WpfApplication1\TimeAndWeather.csproj", "{5BB15D92-1481-402A-9F86-FBF4E86C2CF0}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeAndWeather_TIamo", "WpfApplication1\TimeAndWeather_TIamo.csproj", "{5BB15D92-1481-402A-9F86-FBF4E86C2CF0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -7,20 +7,36 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeAndWeather_Johncy", "Wp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeAndWeather_TIamo", "WpfApplication1_Tiamo\TimeAndWeather_TIamo.csproj", "{5BB15D92-1481-402A-9F86-FBF4E86C2CF0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PublicClassLibrary", "PublicClassLibrary\PublicClassLibrary.csproj", "{3972ACCF-0D4E-44F3-A679-573E7DDC3354}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
 		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19AA3679-CBF1-4DFE-A3CA-469F77FD9AE6}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{19AA3679-CBF1-4DFE-A3CA-469F77FD9AE6}.Debug|x86.ActiveCfg = Debug|x86
 		{19AA3679-CBF1-4DFE-A3CA-469F77FD9AE6}.Debug|x86.Build.0 = Debug|x86
+		{19AA3679-CBF1-4DFE-A3CA-469F77FD9AE6}.Release|Any CPU.ActiveCfg = Release|x86
 		{19AA3679-CBF1-4DFE-A3CA-469F77FD9AE6}.Release|x86.ActiveCfg = Release|x86
 		{19AA3679-CBF1-4DFE-A3CA-469F77FD9AE6}.Release|x86.Build.0 = Release|x86
+		{5BB15D92-1481-402A-9F86-FBF4E86C2CF0}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{5BB15D92-1481-402A-9F86-FBF4E86C2CF0}.Debug|x86.ActiveCfg = Debug|x86
 		{5BB15D92-1481-402A-9F86-FBF4E86C2CF0}.Debug|x86.Build.0 = Debug|x86
+		{5BB15D92-1481-402A-9F86-FBF4E86C2CF0}.Release|Any CPU.ActiveCfg = Release|x86
 		{5BB15D92-1481-402A-9F86-FBF4E86C2CF0}.Release|x86.ActiveCfg = Release|x86
 		{5BB15D92-1481-402A-9F86-FBF4E86C2CF0}.Release|x86.Build.0 = Release|x86
+		{3972ACCF-0D4E-44F3-A679-573E7DDC3354}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3972ACCF-0D4E-44F3-A679-573E7DDC3354}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3972ACCF-0D4E-44F3-A679-573E7DDC3354}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3972ACCF-0D4E-44F3-A679-573E7DDC3354}.Debug|x86.Build.0 = Debug|Any CPU
+		{3972ACCF-0D4E-44F3-A679-573E7DDC3354}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3972ACCF-0D4E-44F3-A679-573E7DDC3354}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3972ACCF-0D4E-44F3-A679-573E7DDC3354}.Release|x86.ActiveCfg = Release|Any CPU
+		{3972ACCF-0D4E-44F3-A679-573E7DDC3354}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

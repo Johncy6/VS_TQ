@@ -350,7 +350,7 @@ namespace TimeAndWeather
         }
 
         /// <summary>
-        /// 更新时间
+        /// 更新日期时间
         /// </summary>
         /// <param name="dt3"></param>
         private void UpDateTime(DateTime dt3)

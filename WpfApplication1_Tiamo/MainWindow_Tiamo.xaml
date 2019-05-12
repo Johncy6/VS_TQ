@@ -1,4 +1,4 @@
-﻿<Window x:Class="TimeAndWeather.MainWindow"
+﻿<Window x:Class="TimeAndWeather_Tiamo.MainWindow_Tiamo"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="282" Width="609" WindowStyle="None"  ShowInTaskbar="False"

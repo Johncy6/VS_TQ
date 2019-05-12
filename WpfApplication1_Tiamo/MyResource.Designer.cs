@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TimeAndWeather {
+namespace TimeAndWeather_Tiamo {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace TimeAndWeather {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TimeAndWeather.MyResource", typeof(MyResource).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TimeAndWeather_Tiamo.MyResource", typeof(MyResource).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

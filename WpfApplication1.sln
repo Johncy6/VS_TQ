@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeAndWeather_Johncy", "WpfApplication1_Johncy\TimeAndWeather_Johncy.csproj", "{19AA3679-CBF1-4DFE-A3CA-469F77FD9AE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeAndWeather_TIamo", "WpfApplication1_Tiamo\TimeAndWeather_TIamo.csproj", "{5BB15D92-1481-402A-9F86-FBF4E86C2CF0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeAndWeather_Tiamo", "WpfApplication1_Tiamo\TimeAndWeather_Tiamo.csproj", "{5BB15D92-1481-402A-9F86-FBF4E86C2CF0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PublicClassLibrary", "PublicClassLibrary\PublicClassLibrary.csproj", "{3972ACCF-0D4E-44F3-A679-573E7DDC3354}"
 EndProject

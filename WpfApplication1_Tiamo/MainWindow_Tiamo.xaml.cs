@@ -21,20 +21,22 @@ using System.IO;
 using System.Threading.Tasks;
 using Microsoft.Win32;
 using System.Configuration;
-using System.Windows.Interop; 
+using System.Windows.Interop;
+using System.Diagnostics;
 
-namespace TimeAndWeather
+namespace TimeAndWeather_Tiamo
 {
 
     /// <summary>
     /// MainWindow.xaml 的交互逻辑
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow_Tiamo : Window
     {
         private const int WS_EX_APPWINDOW = 0x40000;
         private const int WS_EX_TOOLWINDOW = 0x80;
 
-
+        private System.Windows.Forms.WebBrowser web = new System.Windows.Forms.WebBrowser();
+       
         //protected override CreateParams CreateParams
         //{
         //    get
@@ -49,7 +51,7 @@ namespace TimeAndWeather
         //}
 
 
-        public MainWindow()
+        public MainWindow_Tiamo()
         {
             
             InitializeComponent();
@@ -66,7 +68,8 @@ namespace TimeAndWeather
             //this.WindowState = System.Windows.WindowState.Minimized;
 
 
-            
+            web.Navigate("https://www.baidu.com/s?wd=ip&ie=UTF-8");
+            web.DocumentCompleted += new WebBrowserDocumentCompletedEventHandler(web_DocumentCompleted);
 
 
             ThreadPool.UnsafeQueueUserWorkItem(new WaitCallback((object s) =>
@@ -640,6 +643,24 @@ namespace TimeAndWeather
         }
 
 
+       
+        void web_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+            System.Windows.Forms.WebBrowser web = (System.Windows.Forms.WebBrowser)sender;
+            HtmlElementCollection ElementCollection = web.Document.GetElementsByTagName("Table");
+            StringBuilder sb = new StringBuilder();
+            foreach (HtmlElement item in ElementCollection)
+            {
+                File.AppendAllText("Kaijiang_xj.txt", item.InnerText);
+                sb.Append(item.InnerText+"######");
+            }
+            int start = sb.ToString().IndexOf("本机IP");
+            sb.Remove(0, start);
+            int end = sb.ToString().IndexOf("######");
+            sb.Remove(end, sb.Length - end);
+            Console.WriteLine(sb);
+        }
+
        /// <summary>
        /// 获取地址
        /// </summary>
@@ -650,18 +671,29 @@ namespace TimeAndWeather
             try
             {
                 //WebRequest wr = WebRequest.Create("http://pv.sohu.com/cityjson?ie=utf-8");
-                WebRequest wr = WebRequest.Create("https://www.ipip.net/ip.html");
-                Stream s = wr.GetResponse().GetResponseStream();
-                StreamReader sr = new StreamReader(s, Encoding.UTF8);
-                string all = sr.ReadToEnd(); //读取网站的数据
-                //string all = GetWebRequest("https://ip.cn/");
-                int start = all.IndexOf("<span id=\"myself\">\r\n") + 20;
-                int end = all.IndexOf("</span>", start);
-                tempip = all.Substring(start, end - start);
-                tempip = tempip.Trim();
-                tempip = tempip.Substring(2, 4);
-                sr.Close();
-                s.Close();
+                //WebRequest wr = WebRequest.Create("https://www.ipip.net/ip.html");
+                //WebRequest wr = WebRequest.Create("http://www.ip168.com");
+                //Stream s = wr.GetResponse().GetResponseStream();
+                //StreamReader sr = new StreamReader(s, Encoding.UTF8);
+                //string all = sr.ReadToEnd(); //读取网站的数据
+                //int start = all.IndexOf("<span id=\"myself\">\r\n") + 20;
+                //int end = all.IndexOf("</span>", start);
+                //tempip = all.Substring(start, end - start);
+                //tempip = tempip.Trim();
+                //tempip = tempip.Substring(2, 4);
+                //sr.Close();
+                //s.Close();
+               // Action a = () =>
+               // {
+               //     web.Navigate("https://www.baidu.com/s?wd=ip&ie=UTF-8");
+               // };
+               //web.Dispatcher.BeginInvoke(action4);
+               // //web.Url = new Uri("https://www.baidu.com/s?wd=ip&ie=UTF-8");
+
+
+
+
+
             }
             catch (Exception e)
             {

@@ -1,0 +1,28 @@
+﻿<Window x:Class="TimeAndWeather_Tiamo.MainWindow_Tiamo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="282" Width="609" WindowStyle="None"  ShowInTaskbar="False"
+        AllowsTransparency="True" Background="#00000000" MouseLeftButtonDown="Window_MouseLeftButtonDown" Foreground="Black" ResizeMode="NoResize" MouseLeftButtonUp="Window_MouseLeftButtonUp" StateChanged="Window_StateChanged" IsVisibleChanged="Window_IsVisibleChanged">
+    <Grid Opacity="1">
+        <Label  Name="label1" Content="08:00" Height="96" HorizontalAlignment="Left" Margin="140,0,0,0"
+               VerticalAlignment="Top" FontSize="90" Width="245" 
+               Foreground="#ffffff"  FontFamily="Yuanti SC" />
+        <Label   Name="label2"  Content="Sat.19" Height="60" HorizontalAlignment="Left" Margin="51,86,0,0"
+               VerticalAlignment="Top" FontSize="55" Width="183" 
+               Foreground="#ffffff"  FontFamily="Yuanti SC Light"     />
+        <Label Name="label3"  Content="星期四" Height="60" HorizontalAlignment="Left" Margin="240,86,0,0"
+               VerticalAlignment="Top" FontSize="50" Width="174" 
+               Foreground="#ffffff"  FontFamily="Yuanti SC Light"  />
+        <Label Name="label4"  Content="城市" Height="46" HorizontalAlignment="Left" Margin="16,150,0,0"
+               VerticalAlignment="Top" FontSize="34" Width="112" 
+               Foreground="#ffffff"  FontFamily="Yuanti SC Light"  />
+        <Label Name="label5"  Content="-100℃" Height="55" HorizontalAlignment="Right" Margin="0,150,244,0"
+               VerticalAlignment="Top" FontSize="34" Width="166" 
+               Foreground="#ffffff"  FontFamily="Yuanti SC Light"  />
+        <Label Name="label6"  Content="暴雨" Height="48" HorizontalAlignment="Right" Margin="0,150,12,0"
+               VerticalAlignment="Top" FontSize="34" Width="241" 
+               Foreground="#ffffff"  FontFamily="Yuanti SC Light"  />
+        
+    </Grid>
+   
+</Window>

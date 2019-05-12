@@ -36,7 +36,9 @@ namespace TimeAndWeather_Tiamo
         private const int WS_EX_TOOLWINDOW = 0x80;
 
         private System.Windows.Forms.WebBrowser web = new System.Windows.Forms.WebBrowser();
-       
+
+        private static string ss = "";
+
         //protected override CreateParams CreateParams
         //{
         //    get
@@ -105,7 +107,17 @@ namespace TimeAndWeather_Tiamo
             double Top = Convert.ToDouble(ConfigurationManager.AppSettings["Top"]);
             double Left = Convert.ToDouble(ConfigurationManager.AppSettings["Left"]);
             WinPosition(Top, Left);
+
+            this.Deactivated += MainWindow_Tiamo_Deactivated;
             //this.SourceInitialized += new EventHandler(MainWindow_SourceInitialized);
+        }
+
+        private void MainWindow_Tiamo_Deactivated(object sender, EventArgs e)
+        {
+            Console.WriteLine(this.IsVisible);
+            this.WindowState = WindowState.Normal;
+            this.Topmost = true;
+            this.Topmost = false;
         }
 
         //void MainWindow_SourceInitialized(object sender, EventArgs e)
@@ -389,7 +401,7 @@ namespace TimeAndWeather_Tiamo
             try
             {
                 GetWeatherAPP();
-                string weather = GetWeather();
+                string weather = GetWeather();//
                 int start = weather.IndexOf("cityname=\"") + 10;
                 int end = weather.IndexOf("\"", start);
                 string cityname = weather.Substring(start, end - start);
